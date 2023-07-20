@@ -237,7 +237,9 @@ export default {
       if (!this.v$.$error) {
          const res = await fetch("https://sw-api.000webhostapp.com/products/create", {
           method: "POST",
+          mode: "cors",
           headers: {
+            "Access-Control-Allow-Origin":"*"
             "Content-Type": "application/json",
           },
           body: JSON.stringify(product),
