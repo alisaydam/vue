@@ -36,6 +36,7 @@ export default {
         method: "POST",
         mode: "cors",
         headers: {
+          "Access-Control-Allow-Origin":"*",
           "Content-type": "application/json;",
         },
         body: JSON.stringify({
