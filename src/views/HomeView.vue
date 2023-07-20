@@ -33,12 +33,11 @@ export default {
     const massDelete = async () => {
     try {
         const res = await fetch("https://sw-api.000webhostapp.com/products/delete", {
-          method: "POST",
-          mode: "cors",
-          headers: {
-            "Access-Control-Allow-Origin":"*"
-            "Content-Type": "application/json",
-          },
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-type": "application/json;",
+        },
         body: JSON.stringify({
           ids: Object.values(checkedProducts.value),
         }),
